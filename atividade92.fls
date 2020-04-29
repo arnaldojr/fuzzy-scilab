@@ -1,0 +1,67 @@
+# sciFLT scilab Fuzzy Logic Toolbox
+<REVISION>
+ <revision>@REV@
+
+<DESCRIPTION>
+ <name>at92
+ <comment>atividade92
+ <type>m
+ <SNorm>asum
+ <SNormPar>0
+ <TNorm>aprod
+ <TNormPar>0
+ <Comp>one
+ <CompPar>0
+ <ImpMethod>prod
+ <AggMethod>max
+ <defuzzMethod>centroide
+
+<INPUT>
+ <name>altura
+ <range>0 1
+  <mf_name>baixa
+   <mf_type>trimf
+   <mf_par>-1  0  0.5
+  <mf_name>media
+   <mf_type>trimf
+   <mf_par> 0  0.5 1
+  <mf_name>alta
+   <mf_type>trimf
+   <mf_par>0.5 1 1.1
+
+ <name>distancia
+ <range>0 1
+  <mf_name>perto
+   <mf_type>trimf
+   <mf_par>-1  0  0.5
+  <mf_name>medio
+   <mf_type>trimf
+   <mf_par> 0  0.5 1
+  <mf_name>longe
+   <mf_type>trimf
+   <mf_par>0.5 1 1.1
+
+<OUTPUT>
+ <name>PWM
+ <range>0 100
+  <mf_name>baixo
+   <mf_type>trimf
+   <mf_par>-1 0 50
+  <mf_name>medio
+   <mf_type>trimf
+   <mf_par>0 50 100
+  <mf_name>alto
+   <mf_type>trimf
+   <mf_par>50 100 101
+
+<RULE>
+1 1 1 1 1.0
+1 2 2 1 1.0
+1 3 3 1 1.0
+2 1 1 1 1.0
+2 2 3 1 1.0
+2 3 3 1 1.0
+3 1 1 1 1.0
+3 2 2 1 1.0
+3 3 2 1 1.0
+
